@@ -46,7 +46,7 @@ const deletePost = (postid)=>{
                   return(
                     <div className="card home-card" key={item._id}>
                     <h5 style={{padding:"5px"}}> 
-                    {item.postedBy.name} {item.postedBy._id==state._id
+                    {item.postedBy._id} {item.postedBy._id==state._id
                     &&
                     <i className="material-icons" style={{float:"right"}} 
                     onClick={()=>deletePost(item._id)}
