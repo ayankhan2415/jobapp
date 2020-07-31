@@ -27,6 +27,10 @@ const deletePost = (postid)=>{
   }).then(res=>res.json())
   .then(result=>{
       console.log(result)
+      const newData = data.filter(item=>{
+        return item._id!== result._id
+      })
+      setData(newData);
       
   })
 }
@@ -41,12 +45,16 @@ const deletePost = (postid)=>{
                 data.map((item) => {
                   return(
                     <div className="card home-card" key={item._id}>
-                    <h5 style={{padding:"5px"}}>
-                   <i className="material-icons" style={{
-                        float:"right"
-                    }} 
+                    <h5 style={{padding:"5px"}}> 
+                    {item.postedBy.name} {item.postedBy._id==state._id
+                    &&
+                    <i className="material-icons" style={{float:"right"}} 
                     onClick={()=>deletePost(item._id)}
                     >delete_sweep</i>
+                    
+                    }
+
+                   
 
                     </h5>
                     <div className="card-image">
@@ -54,8 +62,8 @@ const deletePost = (postid)=>{
                     </div>
                     <div className="card-content">
                     
-                        <h6>{item.title}</h6>
-                        <p>{item.body}</p>
+                        <h2>{item.title}</h2>
+                        <h4>{item.body}</h4>
                         
                         
                         
