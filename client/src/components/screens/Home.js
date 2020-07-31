@@ -46,7 +46,7 @@ const deletePost = (postid)=>{
                         float:"right"
                     }} 
                     onClick={()=>deletePost(item._id)}
-                    >delete</i>
+                    >delete_sweep</i>
 
                     </h5>
                     <div className="card-image">
