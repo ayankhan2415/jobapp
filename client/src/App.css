@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+a{
+  color: black !important
+}
+.brand-logo{
+  font-family: 'Ranchers', cursive;
+}
+.mycard{
+  margin-top: 60px;
+}
+.auth-card{
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 10px auto;
+}
+.interstellus{
+  font-family: 'Ranchers', cursive;
+  margin-bottom: 70px;
+  margin-top: -10px;
+}
+.home-card{
+  max-width: 600px;
+  height: max-content;
+  margin: 26px auto;
+}
+.home-card,h2{
+  position: relative;
+  left: 30px;
+}
+#toast-container{
+  top:30px !important;
+  right: 20px!important ;
+  left: auto !important;
+}
